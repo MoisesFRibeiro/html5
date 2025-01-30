@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Definição de charset para UTT-8, importante para caracteres especiais -->
+    <meta charset="UTF-8" />
+    <!-- Defenindo a visualização para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Simples</title>
+  </head>
+  <body>
+    <!-- Titulo principal da página -->
+    <h1>Formulário de contato</h1>
+
+    <!-- Inicio do formi=ulário. O atributo 'action' define para onde os dados serão enviados -->
+    <form action="/enviar" method="post">
+      <!-- O método 'post' envia os dados de forma segura, sem expor na URL -->
+      
+      <!-- Campo de entrada para nome -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" nome="nome" required />
+      <hr /><br />
+
+      <!-- Campo de entrada para o e-mail -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required />
+      <br /><br />
+
+      <!-- Área de texto para a mensagem -->
+      <label for="mensagem">Mensagem:</label>
+      <textoarea id="mensagem" name="mensagem" rows="4" required></textoarea>
+      <br /><br />
+      
+      <!-- Botão para enviar o formulário -->
+      <button type="submit">Enviar</button> 
+    </form>
+  </body>
+</html>
