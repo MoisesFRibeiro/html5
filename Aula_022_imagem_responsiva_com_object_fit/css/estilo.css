@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Utilizando toda a altura da janela */
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    /* Limita a altura maxima */
+    max-width: 1000px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilo container para a imagem  */
+.image-container {
+    /* O container da imagemocupa 100% da largura do 
+    conatiner pai */
+    
+}
