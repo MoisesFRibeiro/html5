@@ -60,3 +60,22 @@ header p {
 }
 
 /* caixa "depois" */
+.caixa.depois{
+    /*Box-sizing com border-box, o padding e a borda não afetam o tamanhop total */
+    box-sizing: border-box;
+    /*Cor de fundo diferente para caixa "depois" */
+    background-color: #e0f7fa;
+}
+
+.caixa.depois p {
+    font-size: 1.1em;
+    color: #00796b;
+}
+
+/* Estilo para o footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    color: #777;
+}
