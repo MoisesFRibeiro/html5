@@ -5,23 +5,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #333;
+    color: #ffffff;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    background: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    display: inline;
 }
 
 nav {
     text-align: center;
     margin-top: 30px;
+    color: white;
 }
 
 .clientes-container {
     width: 50%;
     margin: auto;
-    background: white;
+    background: #333;
+    color: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -34,19 +42,8 @@ label {
     text-align: left;
 }
 
-input[type="text"]
-input[type="email"]
-select,
-textarea{
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 button {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 10px 20px;
     border: none;
     background-color: #333;
@@ -54,4 +51,83 @@ button {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.float-left img {
+    float: left;
+    margin-right: 10px;
+}
+
+.float-right img {
+    float: right;
+    margin-left: 15px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20PX;
+}
+
+.Home {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    display: inline;
+}
+
+.Sobre {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.Portifólio {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.Cliente {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.Contato {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.Voltar_ao_topo {
+    text-align: center;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.menu-simples ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: white;
 }
