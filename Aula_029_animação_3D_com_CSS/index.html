@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas do documento HTML -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animaçõa  3D com CSS</title>
+    <style>
+        /* Estilo do corpo da página */
+        body{
+            display: flex; /* Layout flexbox para centralização */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total do viewport */
+            background-color: #f0f0f0; /* Cor de fundo */
+            perspective: 1000px; /* Define a profundidadedo espaço 3D */
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+        }
+
+        /* Container da cena 3D - onde a mágica acontece */
+        .cena-3d {
+            width: 200px; /* Largura do cubo */
+            height: 200px; /* Altura do cubo */
+            position: relative; /* Permite posicionamento absoluto dos filhos */
+            transform-style: preserve-3d; /* MUITO IMPORTANTE: mantém transformações 3d nos filhos */
+            animation: girar 8s infinite linear; /* Aplica animação de rotação */ 
+        }
+
+        /* Definição da animaçõa de rotação */
+        @keyframes girar {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            } /* Estado inicial */
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            } /* Estado final */
+        }
+
+        /* Estilo base para todas as faces do cubo */
+        .face {
+            position: absolute; /* Posicionamento absoluto dentro da cena */
+            width: 200px; /* Largura igual ao container */
+            height: 200px; /* Altura igual ao container */
+            opacity: 0.8; /* Leve transparencia para efeito visual */
+            display: flex; /* Flexbox para centralizar conteúdo */
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            font-size: 24px; /* Tamanho do texto */
+            font-weight: bold; /* Texto em negrito */
+            color: white; /* Cor do texto */
+            border: 2px solid white; /* Borda branca */
+            box-sizing: border-box; /* Inclui borda no cálculo do tamanho */
+        }
+
+        /* POSICIONAMENTO DAS FACES DO CUBO ( cada face tem uma transformação única) */
+        .frente {
+            transform: translateZ(100px);
+            background-color: #3498db;
+        }
+
+        /* Face traseira - posicionado 100px "para trás" e rotacionada 180° em Y */
+        .tras {
+            transform: translateZ(-100px) rotateY(180deg);
+            background-color: #e74c3c;
+        }
+
+        /* Face direita - movida para a direita no x e rotaciona 90° em Y */
+        .direita {
+            transform: translateX(100px) rotateY(90deg);
+            background-color: #2ecc71;
+        }
+
+        /* Face esquerda - movida para esquerda no x e rotacionada -90° em Y */
+        .esquerda {
+            transform: translateX(-100px) rotateY(-90deg);
+            background-color: #f1c40f;
+        }
+
+        /* Face superior - movida para cima no Y e rotaciona 90° em X */
+        .topo {
+            transform: translateY(-100px) rotateX(90deg);
+            background-color: #9b59b6;
+        }
+
+        /* Face inferior - movida para baixo no Y e rotacionada  -90° em X */
+        .base {
+            transform: translateY(100px) rotateX(-90deg);
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container principal da animação 3D -->
+     <div class="cena-3d">
+        <!-- Cada div representa uma face do cubo -->
+         <div class="face frente">Frente</div>
+         <div class="face tras">Trás</div>
+         <div class="face direita">Direita</div>
+         <div class="face esquerda ">ESquerda</div>
+         <div class="face topo">Topo</div>
+         <div class="face base">Base</div>
+     </div>
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags padrão para configuração do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação Simples com CSS3</title>
+
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            display: flex; /* usa o flexbox para centralizar */
+            justify-content: center; /* centraliza horizontalmente */
+            align-items: center; /* centralizar verticalmente */
+            height: 100vh; /* Altura toital da viewport */
+            background-color: #f0f0f0; /* cor de fundo cinza claro */
+        }
+
+        /* Estilo para ciaxa que será animada */
+        .caixa {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 10px;
+
+            /* Propriedades da animação */
+            animation: moverEColorir 4s ease-in-out infinite alternate;
+            /* Nome da animção : moverEColorir */
+            /* Duração: 4 segundos */
+            /* Timing function: ease-in-out (suaviza inicio e fim) */
+            /* Iterações: infinite (repete infinitamente) */
+            /* Direção: alternate (vai e volta) */
+        }
+
+        /* Definição dos keyframes (quadros-chave) da animação */
+        @keyframes moverEColorir {
+            /* Estado inicial (0% do tempo da animação) */
+            0% {
+                transform: translateY(0); /* Posição vertical inicial */
+                background-color: #3498db; /* Cor azul */
+            }
+
+            /* Estado intermediário (50% do tempo da animação) */
+            50% {
+                transform: translateY(-100px); /* Move 100px para cima */
+                background-color: #e74c3c; /* Muda para vermelho */
+            }
+
+            /* Estado final (100% do tempo da animação) */
+            100% {
+                transform: translateY(0); /* Volta a posição inicial */
+                background-color: #2ecc71; /* Muda para verde */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Div que receberáa animação -->
+     <div class="caixa"></div>  
+</body>
+</html>

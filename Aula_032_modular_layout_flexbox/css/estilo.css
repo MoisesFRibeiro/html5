@@ -1,0 +1,144 @@
+/* Módulo 1: conmfigurações Básicas e Reset */
+
+/*Reset básico para renovar margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações do corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /*Garante que o body ocupe pelo menos toda altura da tela */
+    display: flex; /* Ativa o flex-box no body */
+    flex-direction: column; /* Organiza os filhos em coluna (header, main, footer) */
+}
+
+/* Estilo bãsico para todas as seções (apenas visualização durante o desenvolvimento) */
+header, nav, section, aside, footer {
+    padding: 20px;
+    border: 1px dashed #ccc; /* Borda tracejada para visualização */
+}
+
+/* Módulo 2: Estilizção do Banner */
+.banner {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+
+
+    /* Flexbox para alinha conteúdo verticalmente (se houver múltiplos elementos) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha verticalmente */
+    align-items: center ; /*Alinha horizontalmente */
+
+    min-height: 150px; /* Altura minima */
+}
+
+/* Módulo 3: Estlização da navegação */
+
+.navegacao {
+    background-color: #333; /* Cor de funod escura */
+
+    /* Flexbox para alinhar os in=tens de navegação  horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas pequenas */
+}
+
+/* Estilo dos links de navegação */
+.navegacao a {
+    color: white;
+    text-decoration: none; /*Remove sublinhado */
+    padding: 15px 20px;
+    text-align: center;
+    transition: background-color 0.3s; /*Transiçõa suave para hover */
+}
+
+/* Efeito hover nos itens links */
+.navegacao a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+/* Módulo 4: estilização do conteudo principal */
+
+.conteudo-principal {
+    /* Flexbox para organizar a área de contéudo e a barra lateral */
+    display: flex;
+    flex: 1; /* Faz com que o main ocupe todo o espaço disponivel entrew header e footer */
+
+    /* Layout psdrão: barra lateral a direita */
+    flex-direction: row;
+
+    /* Para telas pequenas, vamos mudar para coluna (abaixo no módulo responsivo) */
+}
+
+.area-conteudo {
+    background-color: #f4f4f4;
+    flex: 3; /* Ocupa 3 partes do espaço disponivel  */
+    min-height: 400px; /* Altura minima */
+}
+
+.barra-lateral {
+    background-color: #e4e4e4;
+    flex: 1; /*Ocupa 1 parte do espaço disponivel */
+}
+
+/* Módulo 5: Estilização do Rodapé  */
+
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    /* Flexbox para organizar multiplos elementos no rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Módulo 6: Adaptações para Responsividade */
+
+@media (max-width: 768px) {
+    /* Quando a tela for menor que 768px */
+
+    .conteudo-principal {
+        flex-direction: column; /* Muda direçao para empilhar conteudo */ 
+    }
+
+    .area-conteudo, .barra-lateral{
+        /*Flex: 1; Ambas ocupam a mesma proporção */
+        width: 100%; /* Ocupam toda a largura */
+    }
+
+    .navegacao {
+        flex-direction: column; /*Empilha os links de navegação */
+    }
+
+    .navegacao a {
+        border-bottom: 1px solid #555; /* Adiciona divisão entre links */
+    }
+}
+
+/* Módulo 7: Melhorias Visuais e Detalhes */
+
+/* Espaçamento consistente */
+body > * {
+    padding: 20px;
+}
+
+/* Sombra no banner par profundidade */
+.banner {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Borda entre conteúdo e barra lateral */
+.barra-lateral {
+    border-left:  1px solid #ccc;
+}
+@media 
